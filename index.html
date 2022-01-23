@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./css/tailwind.css" />
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<style>
+			@font-face {
+				font-family: muli;
+				src: url(./fonts/muli/Muli.ttf);
+			}
+			* {
+				font-family: muli;
+				scroll-behavior: smooth;
+			}
+			::-webkit-scrollbar {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div
+			class="hidden relative h-[400px] w-[400px]"
+			style="
+				background: url();
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+			"
+		></div>
+		<div class="relative h-screen w-screen overflow-hidden">
+			<div
+				class="fixed h-auto w-[150px] border rounded py-3 grid gap-2 z-30 bg-white searchsuggest"
+			>
+				<div
+					class="relative hidden h-[30px] w-full text-sm items-center px-3 hover:bg-gray-100 duration-300 cursor-pointer"
+				></div>
+			</div>
+			<div class="relative h-full w-full">
+				<div class="relative xl:h-[100px] lg:h-[100px] md:h-[80px] h-[60px]">
+					<div
+						class="relative h-full w-full flex items-center justify-between xl:px-40 lg:px-40 md:px-32 sm:px-16 px-4"
+					>
+						<div
+							class="relative h-auto w-auto text-md font-extrabold text-gray-600"
+						>
+							Class - 10
+							<span class="right-1 -top-2 absolute text-[8px] font-light"
+								>Img</span
+							>
+						</div>
+						<div
+							class="relative h-auto w-auto flex items-center gap-10 text-sm"
+						>
+							<div class="relative h-auto w-auto cursor-pointer">
+								All photos
+							</div>
+							<div class="relative h-auto w-auto cursor-pointer">Education</div>
+							<div class="relative h-auto w-auto cursor-pointer">School</div>
+							<div class="relative h-auto w-auto cursor-pointer">Class</div>
+						</div>
+						<div class="relative h-auto w-auto">
+							<div
+								class="relative flex items-center h-[35px] w-[150px] rounded border border-gray-200"
+							>
+								<input
+									type="text"
+									class="relative searchField h-full w-full bg-transparent px-4 text-xs outline-none"
+									placeholder="Search"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div
+					class="relative xl:h-[calc(100%-100px)] lg:h-[calc(100%-100px)] md:h-[calc(100%-80px)] h-[calc(100%-60px)]"
+				>
+					<div class="relative h-full w-full px-40">
+						<div class="relative h-full w-full overflow-y-auto">
+							<div
+								class="relative h-auto w-full searchresultshower hidden items-center gap-4 flex-wrap py-16"
+							></div>
+							<div class="relative h-auto w-full mainbox pt-16">
+								<div
+									class="relative h-[400px] w-full flex items-center justify-center bigimgbox"
+									style="
+										background-size: 'cover';
+										background-position: 'center';
+										background-repeat: 'no-repeat';
+									"
+								>
+									<!-- <div
+										class="relative h-auto w-auto text-[150px] text-white/20"
+									>
+										GALLERY
+									</div> -->
+								</div>
+								<div class="relative h-auto w-full">
+									<div class="relative pt-16 w-full h-auto grid gap-4">
+										<div class="relative text-xl font-extrabold">Education</div>
+										<div class="relative h-auto w-full">
+											<div
+												class="relative h-auto w-full flex flex-wrap gap-4 educationphotoscontainer"
+											>
+												<div class="relative h-auto w-auto">
+													<div
+														class="relative h-[250px] w-[300px] border text-white rounded imgcontainers cursor-pointer group overflow-hidden"
+														style="
+															background: url(https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+															background-size: cover;
+															background-position: center;
+															background-repeat: no-repeat;
+														"
+													>
+														<div
+															class="absolute left-0 top-0 h-full w-full text-sm flex items-end gap-2 px-3 py-3"
+														>
+															<div
+																class="absolute top-0 left-0 h-full w-full overflow-hidden bg-purple-500 opacity-0 group-hover:opacity-20 duration-200"
+															></div>
+															<div class="relative h-auto w-auto">
+																<div
+																	class="relative h-auto w-auto text-sm font-extrabold text-white"
+																>
+																	friends
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="relative h-auto w-full">
+									<div class="relative h-auto w-full py-16 grid gap-4">
+										<div class="relative h-auto w-auto text-xl font-xl">
+											Random Collection's
+										</div>
+										<div class="relative h-auto w-full">
+											<div
+												class="relative h-auto w-full flex flex-wrap gap-4 alltypesofcollection"
+											>
+												<div class="relative h-auto w-auto">
+													<div
+														class="relative h-[250px] w-[300px] text-white border rounded-xl px-3 py-3 imgcontainers"
+													>
+														<div
+															class="relative h-auto w-auto text-sm flex items-center gap-2"
+														>
+															<div></div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div
+								class="relative h-auto w-full border-t xl:py-8 lg:py-8 md:py-6 py-4"
+								id="footer"
+							>
+								<div
+									class="relative h-auto w-full flex items-center justify-between"
+								>
+									<div class="relative">
+										<div
+											class="relative xl:text-sm lg:text-sm md:text-sm sm:text-sm text-xs font-light text-gray-600"
+										>
+											© 2022 class 10. All rights reserved.
+										</div>
+									</div>
+									<div class="relative">
+										<div
+											class="relative xl:text-sm lg:text-sm md:text-sm sm:text-sm text-xs font-light text-gray-600"
+										>
+											Privacy & Policy
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="./js/gallery/list.js"></script>
+		<script src="./js/gallery/index.js"></script>
+	</body>
+</html>
